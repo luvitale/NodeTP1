@@ -21,10 +21,12 @@ Crear una función arrow, que devuelva una clase en ES6 que contendrá dos méto
 Crear un propiedad estática contadorInstancias que me indique cuantas instancias hay de esa clase.
 */
 const crearClase = () => {
-  return function(texto) {
-    this.texto = texto
+  return class Clase {
+    constructor(texto) {
+      this.texto = texto
+    }
 
-    this.contadorPalabras = () => {
+    contadorPalabras() {
       if (typeof this.texto != 'string') {
         return -1
       }
@@ -32,7 +34,7 @@ const crearClase = () => {
       return this.texto == '' ? 0 : this.texto.split(' ').length
     }
 
-    this.hayNumeros = () => {
+    hayNumeros() {
       if (typeof this.texto != 'string') {
         return -1
       }
