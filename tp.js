@@ -23,6 +23,7 @@ Crear un propiedad estática contadorInstancias que me indique cuantas instancia
 const crearClase = () => {
   return class Clase {
     constructor(texto) {
+      Clase._contadorInstancias = (Clase._contadorInstancias || 0) + 1
       this._texto = texto
     }
 
@@ -44,6 +45,10 @@ const crearClase = () => {
       }
 
       return this.texto.match(/[0-9]/gi) != null
+    }
+
+    static get contadorInstancias() {
+      return Clase._contadorInstancias
     }
   }
 }
