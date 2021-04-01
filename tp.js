@@ -31,6 +31,14 @@ const crearClase = () => {
 
       return this.texto == '' ? 0 : this.texto.split(' ').length
     }
+
+    this.hayNumeros = () => {
+      if (typeof this.texto != 'string') {
+        return -1
+      }
+
+      return this.texto.match(/[0-9]/gi) != null
+    }
   }
 }
 
