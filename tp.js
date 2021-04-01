@@ -2,8 +2,11 @@
 Realizar una función que permita contar la cantidad de vocales que tiene un texto que se recibe como parámetro. No habrá discriminación entre las vocales en mayúscula y en minúscula. Las vocales acentuadas no se contarán. El valor obtenido se retornará al terminar la función. Si se no se recibe un string retornará -1.
 */
 function contarVocales(texto) {
-  if (typeof texto != 'string')
+  if (typeof texto != 'string') {
     return -1
+  }
+
+  return (texto.match(/[AEIOUaeiou]/gi) || []).length
 }
 
 /* 
