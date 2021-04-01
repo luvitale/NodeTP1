@@ -1,4 +1,10 @@
-Resolvé los ejercicios en el archivo `tp.js`.
-Para ejecutar los test, anda a esta carpeta y ejecutá:
-`npm install` y luego:
-`npm test`.
+[![Build Status](https://travis-ci.com/luvitale/NodeTP1.svg?branch=main)](https://travis-ci.com/luvitale/NodeTP1)
+# Node TP1
+## Install
+```bash
+npm install
+```
+## Test
+```bash
+npm test
+```
